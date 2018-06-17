@@ -1,43 +1,350 @@
+@import "task.css";
+@keyframes gameOver {
+    0%   {background-color: rgb(255, 255, 255);}
+    100% {background-color: rgb(37, 45, 41);}
+}
 *{
   margin: 0;
   padding: 0;
 }
-body{
-}
-main{
+html {
   width: 100%;
+  height: 100%;
+}
+ul li{
+  list-style-type: none;
+}
+body{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: url("../images/backgrounds/ready/start_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 header{
+  height: 15%;
   width: 100%;
-  height: 20vh;
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-h1{
+main{
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menue-container{
+  color: white;
+  width: 45%;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(1,1,1,0.5);
+  background: url("../images/backgrounds/ready/menu_bg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.preview-menue{
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
   text-align: center;
+  font-size: 2rem;
 }
-.screen-shots{
+
+#goToMainMenue, #starGame {
+  width: 30%;
+  height: 30px;
+  background-color: rgba(116, 155, 124, 0.6);
+  /* border: 2px solid #749b7c; */
+  border: none;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.main-menue{
   width: 100%;
-  height: 80vh;
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+.main-menue-header{
+  width: 100%;
+  height: 15%;
+  margin-top: 25px;
+  align-items: center;
+  justify-content: center;
+  display: flex;  
+}
+.main-menue-main{
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  font-size: 1.2rem;
+}
+.main-menue-sidebar-1{
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 15px;
+}
+.main-menue-content{
+  height: 200px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-menue-content input {
+  height: 30px;
+  width: 60%;
+  background-color: rgba(226, 213, 163, 0.6);
+  border: 2px solid #ad9b5b; 
+  padding-left: 10px;
+}
+
+.main-menue-sidebar-2{
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+input[type=radio] {
+  height: 15px;
+  width: 15px;
+}
+
+.lable {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.main-menue-footer{
+  height: 20%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.img-hero{
+  width: 200px;
+  height: 200px;
+}
+.game-field-container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.heroStatusBar-container{
+  width: 400px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+}
+.heroStatusBar-container img{
+  width : 100px;
+}
+.heroStatusBar-container ul {
+  position: relative;
+}
+.character-hp{
+  height: 20px;
+  width: 200px;
   background: red;
+  transition: 1s width;
+  position: relative;
 }
-.game-link{
+.hp-line-hero{
+  border: 2px solid black;
+  height: 20px;
+  text-align: center;
+  width: 200px;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+}
+.character-score{
+  position: absolute;
+  bottom: 0;
+}
+.monsterStatusBar-container{
+  width: 400px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.monsterStatusBar-container ul{
+  position: relative;
+}
+.monster-icon{
+  width: 100px;
+  height: 100px;
+}
+.monster-name{
+  display: flex;
+  justify-content: flex-end;
+}
+.hp-line-monster{
+  border: 2px solid black;
+  height: 20px;
+  text-align: center;
+  width: 200px;
+  box-sizing: border-box;
+  position: absolute;
+  right: 0;
+}
+.monster-hp{
+  height: 20px;
+  width: 200px;
+  background: red;
+  transition: 1s width;
+  right: 0;
+  position: absolute;
+}
+.modal-spell{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.4);
+  transition:width 1s,height 0.5s;
+}
+.spells-list-container{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  transition:width 1s,height 0.5s;
+  background-image:url('../images/backgrounds/spell-list-bg.png');
+}
+.spells-list{
   width: 100%;
-  height: 100vh;
-  background: black;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
-.developers{
-  width: 100%;
-  height: 100vh;
+.spells-list-item{
+  height: 25%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 20px;
 }
-.marina{
-  width: 50%;
-  height: 100vh;
-  background:red;
+.spells-list-item span{
+  font-size: 30px;
+  transition: font-size 0.3s;
+  cursor: pointer;
 }
-.ivan{
-  width: 50%;
+.spells-list-item span:hover{
+  font-size: 50px;
+}
+.canvas-container{
+  width: 100vw;
+  max-width: 1920px;
   height: 100vh;
-  background:yellow;
+  max-height: 974px;
+  background: url("../images/backgrounds/bg_1.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  /* background-size: contain; */
+}
+.modal-game-over-container{
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(255, 255, 255);
+  z-index: 2;
+}
+.start-animation{
+  animation: gameOver 4s infinite alternate;
+}
+.active{
+  display: flex;
+}
+.unactive{
+  display: none !important;
+}
+.hide{
+  width: 0px;
+  height: 0px;
+}
+.show{
+  width: 560px;
+  height: 800px;
+}
+.hidden-spell{
+  visibility: hidden;
+}
+.show-spell{
+  visibility: visible;
+}
+
+/* ////////////  Table  ////////////////// */
+
+table {
+  width: 290px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  text-align: center;
+  border-collapse: separate;
+  border-spacing: 5px;
+ /*  background: #ECE9E0; */
+  background: url("../images/temp/table-bg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  color: #555655;
+  padding: 30px 20px;
+}
+
+th {
+  font-size: 18px;
+  padding: 10px;
+}
+
+td {
+  background: rgba(153, 120, 82, 0.4);
+  border-radius: 4px;
+  padding: 10px;
+  text-align: center;
 }

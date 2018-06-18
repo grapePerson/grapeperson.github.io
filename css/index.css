@@ -1,12 +1,19 @@
+body{
+  background-image: url('../images/main-pattern-bg.jpg');
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 main{
-  width: 100%;
+  width: 80%;
 }
 header{
-  width: 100%;
+  width: 80%;
   height: 20vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: rgba(0,0,0,0.9);
 }
 h1{
   text-align: center;
@@ -14,10 +21,10 @@ h1{
 .about-game{
   width: 100%;
   height: 80vh;
-  background: green;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: rgba(242, 238, 238, 0.7);
 }
 .about-game-header{
   flex-grow: 1;
@@ -73,7 +80,7 @@ h1{
 .screen-shots{
   width: 100%;
   height: 100vh;
-  background: red;
+  background: rgba(0,0,0,0.9);;
   display: flex;
   flex-direction: column;
 }
@@ -96,23 +103,27 @@ h1{
 }
 .screen-shots-list li{
   margin: 0px 10px 0px 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  transition : box-shadow 1s;
+  width: 30%;
 }
 .screen-shots-list li img{
-  width: 600px;
-  height: 300px;
-  transition: width 1s
+  width: 100%;
 }
-/* .screen-shots-list li img:hover{
-  width: 900px;
-  height: 600px;
-} */
+.screen-shots-list li:hover{
+  box-shadow: 10px 10px 5px 5px rgba(0,0,0,0.86);
+}
 .game-link{
   width: 100%;
   height: 100vh;
-  background: black;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  background: rgba(242, 238, 238, 0.7);
 }
 .game-link-header{
 
@@ -126,8 +137,11 @@ h1{
   display:  flex;
   flex-direction: column;
 }
-.developers-header{
+.developers-header-flex-container{
   flex-grow: 1;
+  background: rgba(0,0,0,0.9);
+}
+.developers-header{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -135,6 +149,7 @@ h1{
 .developers-txt{
 
 }
+
 .developers-flex-container{
   display: flex;
   flex-direction: row;
@@ -144,7 +159,8 @@ h1{
 .marina-developer{
   width: 50%;
   height: 100%;
-  background:red;
+  background:rgba(255, 255, 255, 0.9);
+  border-right: 1px solid black;
 }
 .marina-developer-header{
 
@@ -155,11 +171,15 @@ h1{
 .ivan-developer{
   width: 50%;
   height: 100%;
-  background:yellow;
+  background:rgba(255, 255, 255, 0.9);
+  border-left: 1px solid black;
 }
 .ivan-developer-header{
 
 }
 .ivan-developer-solutions{
 
+}
+.empty-space{
+  flex-grow: 2;
 }

@@ -39,12 +39,13 @@ p{
  */
 
 h1 {
-  font-size: 2em;
+  font-size: 40px;
   margin: 0.67em 0;
 }
 h1,h2{
   padding: 0;
   margin: 0;
+  font-size: 36px;
 }
 
 /* Grouping content

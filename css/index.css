@@ -1,9 +1,3 @@
-*{
-  margin: 0;
-  padding: 0;
-}
-body{
-}
 main{
   width: 100%;
 }
@@ -17,11 +11,101 @@ header{
 h1{
   text-align: center;
 }
-.screen-shots{
+.about-game{
   width: 100%;
   height: 80vh;
-  background: red;
+  background: green;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+.about-game-header{
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+.about-game-flex-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 80%;
+  width: 100%
+}
+.game-genre{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 30%;
+}
+.game-genre-header{
+
+}
+.game-genre-txt{
+
+}
+.used-technologies{
+  height: 100%;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.used-technologies-header{
+
+}
+.used-technologies-txt{
+
+}
+.game-controls{
+  height: 100%;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.game-controls-header{
+
+}
+.game-controls-txt{
+
+}
+.screen-shots{
+  width: 100%;
+  height: 100vh;
+  background: red;
+  display: flex;
+  flex-direction: column;
+}
+.screen-shots-header{
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.screen-shots-list{
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+}
+.screen-shots-list li{
+  margin: 0px 10px 0px 10px;
+}
+.screen-shots-list li img{
+  width: 600px;
+  height: 300px;
+  transition: width 1s
+}
+/* .screen-shots-list li img:hover{
+  width: 900px;
+  height: 600px;
+} */
 .game-link{
   width: 100%;
   height: 100vh;
@@ -30,19 +114,52 @@ h1{
   align-items: center;
   justify-content: center;
 }
+.game-link-header{
+
+}
+.game-link-button{
+
+}
 .developers{
   width: 100%;
   height: 100vh;
   display:  flex;
-  flex-direction: row;
+  flex-direction: column;
 }
-.marina{
+.developers-header{
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.developers-txt{
+
+}
+.developers-flex-container{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 80vh;
+}
+.marina-developer{
   width: 50%;
-  height: 100vh;
+  height: 100%;
   background:red;
 }
-.ivan{
+.marina-developer-header{
+
+}
+.marina-developer-solutions{
+
+}
+.ivan-developer{
   width: 50%;
-  height: 100vh;
+  height: 100%;
   background:yellow;
+}
+.ivan-developer-header{
+
+}
+.ivan-developer-solutions{
+
 }

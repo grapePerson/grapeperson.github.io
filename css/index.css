@@ -166,10 +166,18 @@ h1{
   background: rgba(242, 238, 238, 0.7);
 }
 .game-link-header{
-  font-family: "Main";
+  font-size: 38px;
+  margin-bottom: 30px;
 }
 .game-link-button{
+  width: 230px;
+  height: 60px;
+  border-radius: 7px;
+  background-color: blanchedalmond;
+  cursor: pointer;
+  font-size: 25px;
   font-family: "Content";
+  font-family: "Main";
 }
 .developers{
   width: 100%;
@@ -192,8 +200,11 @@ h1{
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 15px;
 }
 .developers-txt{
+  text-align: center;
+  font-size: 20px;
   font-family: "Content";
 }
 
@@ -254,3 +265,4 @@ h1{
   text-align: center;
 
 }
+

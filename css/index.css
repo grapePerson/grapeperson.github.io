@@ -31,12 +31,15 @@ h1{
   height: 80%;
   width: 100%
 }
-.game-genre{
+.game-genre, .used-technologies,
+.resolution, .game-controls{
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100%;
   width: 30%;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .game-genre-header{
 
@@ -44,26 +47,26 @@ h1{
 .game-genre-txt{
 
 }
-.used-technologies{
+/* .used-technologies, .resolution {
   height: 100%;
   width: 30%;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+} */
 .used-technologies-header{
 
 }
 .used-technologies-txt{
 
 }
-.game-controls{
+/* .game-controls{
   height: 100%;
   width: 30%;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+} */
 .game-controls-header{
 
 }
